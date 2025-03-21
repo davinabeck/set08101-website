@@ -5,8 +5,8 @@ const restartbutton = document.getElementById("restart");
 //Story Nodes
 const storynodes = {
   start:{
-    text: "You awaken, head throbbing, the taste of whiskey still on your tongue. The floor beneath you is sticky, and the air smells of dust and rain. The dim light sways on the ceiling above, casting an uneven light over the tavern. The room is eerily quiet. Where is everyone? You need to find out what happened." 
-      choices:[
+    text: "You awaken, head throbbing, the taste of whiskey still on your tongue. The floor beneath you is sticky, and the air smells of dust and rain. The dim light sways on the ceiling above, casting an uneven light over the tavern. The room is eerily quiet. Where is everyone? You need to find out what happened."
+    choices:[
   {text: "Check the bar", next: "checkbar"},
   {text: "Try the front door", next: "locked door"}
   ]
