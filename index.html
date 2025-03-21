@@ -1,169 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Forgotten
-  <style>
-    body {
-        font-family:
-        background-color:
-        color: 
-        text-align:
-        padding: 20px;
-}
-	#game-container	{
-		width:
-		margin:
-		border:
-		padding:
-		background:
-		}
-.choice {
-	display:
-	margin:
-	padding:
-	width:
-	background-color:
-	color:
-	border:
-	cursor:
-	font-size:
-	}
-		.choice:hover {
-			background-color: red;
-}
-	</style>
-<head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Forgotten</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+ <body>
+	 <div id="game container">
+		 <h1> Forgotten</h1>
+		 <p id="story-text"> You awaken in the tavern, disoriented and hungover...</p>
+		 <div id="choices"></div>
+		 <button id="restart" style="display: none;">Restart Game</button>
+	 </div>
 
-<div id="game-container">
-	<h1> Forgotten
-	<p id="story-text">
-			You awaken, head throbbing, the taste of whiskey still on your tongue. The floor beneath you is sticky,
-			and the air mells of dust and rain. The dim light sways on the ceiling above you. The tavern is eerily
-			quiet. Something feels off. 
-</p>
-	<div id="choices"></div>
-</div>
-
-<script>
-			let drunkmode=false;//track if player is drunk
-//game scenes
-const game scenes={
-"start":{
-	text: "What do you do?",
-		choices: [
-		{text: "Check the bar", next scene: "bar"}.
-		{text: "Try the front door", next scene: "locked door"}
-		]
-	},
-"bar":{
-	text: You stumble over to the bar and see an envelope, a bottle of whiskey, and a locked safe.",
-		choices:[
-		{text: "Open the envelope", next scene: "envelope"},
-		{text: "Take a swig of whiskey", next scene: "drunk_mode"},
-		{text: "Open the safe", next scene: "safe"}
-		]
-	},
-"locked_door":{
-	text: "The door is locked. You need to find a key.",
-		choices:[{text: Check the bar", next scene: "bar"}]
-		},
-		"envelope":{
-		text: "You find a note: 'THEY ARE WATCHING. DON'T FORGET. The more you take, the more you leave behind. What am I?"',
-			choices:[{text: "Open the safe", next scene: "safe"}]
-		},
-"safe":{
-text: "The safe has a keypad and a note: 'I am a four-digit code. My digits add up to 10, but no single digit is larger than 5, and no number is repeated. What am I?"',
-	choices:[
-	{text: "Enter 1234", next scene: "safe open"},
-	{text: "Try another combination", next scene: "safe_locked"}
-	]
-},
-	"safe_locked":}
-		text: "Wrong code. The safe remains locked.",
-			choices: [{text: "Try again", next scene: "safe"}]
-	},
-	"safe_open":{
-		text: "The safe opens, revealing a key. This must be the key for the tavern door.",
-			choices:[{text:Unlock the tavern door", next scene: "outside"}]
-	},
-	"drunk-mode":{
-		text: You take a big gulp of whiskey. Your vision blurs, and the words start looking odd.",
-			choices:[
-			{text: "Open the envelope", next scene: "drunk_envelope"},
-			{text: "Try the safe", next scene: "drunk_safe"}
-			]
-	},
-	"drunk_envelope":{
-	text: "YHET ERA INGWAT. T'DON TFOR EGT. Teh erom you ekat, teh erom you eavl behind. tWha ma I?",
-		choices: [{text: "Try the safe", next scene: "drunk_safe"}]
-	},
-	"drunk_safe":{
-	text:tehre si a onte. 'tidgis daa to 10, onne rlaegr htan 5, nnoe rpeaetde. hwat ma I?'",
-		choices:[{text: "Enter 1234", next scene: "safe_open"}]
-	},
-	"outside":{
-	text: "You step into the foggy town. Footsteps lead to the sheriff's office.",
-		choices:[
-		{text: "Go to the sheriff's office", next scene: "sheriff"},
-		{text: "Go into town", next scene: "town"}
-		]
-	},
-	"sheriff":{
-	text: "The sheriff's office looks ransacked. You find a journal: 'The storm brings the truth. The key to the curse is within the boards.'",
-		choices:[
-		{text: "Search the room", next scene:"search_room"},
-		{text: "Go into town", next scene: "town"}
-		]
-	},
-	"town":{
-	text: "A creak makes you turn. The well looks.....different.",
-		choices:[
-		{text: "Go to the well", next scene: "well"},
-		{text: "Go into the old church", next scene: "church"}
-		]
-	},
-	"well":{
-	text: "
-		choices: [{text: "Jump in", next scene: "bad_ending"}]
-	},
-	"church":{
-	text:
-	choices: [{text: , next scene: "good-ending"}]
-	},
-	"search_room":{
-	text:
-	choices: [{text: ,next scene: "funny_ending"}]
-	},
-	"bad_ending":{
-	text:
-	choices: [{text: "Restart", next scene: "start"}]
-	},
-	"good_ending":{
-	text: 
-	choices:[{text: "Restart", next scene: "start"}]
-	},
-	"funny_ending":{
-	text:
-	choices: [{text: "Restart", next scene: "start"}]
-	}
-	};
-	function update game (scene) {
-	document.getElementByld("story-text").innerText=gameScenes[scene].text;
-		let choicesDiv= document.getElementByld("choices");
-		choicesDiv.innerHTML="";
-		gameScenes[scene].choices.forEach(choice=>{
-			let button=document.createElement("button");
-			button.innerText=choice.text;
-			button.classList.add("choice");
-			button.onclick=()=>updateGame(choice.nextScene);
-			choicesDiv.appendChild(button);
-		});
-	}
-
-	updateGame("start");
-</script>
-</body>
+	 <script src="script.js"></script>
+ </body>
 </html>
