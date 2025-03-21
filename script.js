@@ -5,14 +5,14 @@ const restartbutton = document.getElementById("restart");
 //Story Nodes
 const storynodes = {
   start:{
-    text: "You awaken, head throbbing, the taste of whiskey still on your tongue. The floor beneath you is sticky, and the air smells of dust and rain. The dim light sways on the ceiling above, casting an uneven light over the tavern. The room is eerily quiet. Where is everyone? You need to find out what happened. 
+    text: "You awaken, head throbbing, the taste of whiskey still on your tongue. The floor beneath you is sticky, and the air smells of dust and rain. The dim light sways on the ceiling above, casting an uneven light over the tavern. The room is eerily quiet. Where is everyone? You need to find out what happened." 
       choices:[
   {text: "Check the bar", next: "checkbar"},
   {text: "Try the front door", next: "locked door"}
   ]
 },
 checkbar:{
-  text: "You stumble over to the bar and notice dots of blood near a large crack in the counter's wood. That's new. Next to the crack sits an envelope, a bottle of whiskey, and a safe
+  text: "You stumble over to the bar and notice dots of blood near a large crack in the counter's wood. That's new. Next to the crack sits an envelope, a bottle of whiskey, and a safe."
     choices:[
     {text: "Open the envelope", next: "openenvelope"},
     {text: "Open the safe", next: "safepuzzle"},
@@ -24,7 +24,7 @@ text:"Locked. You need to find the key"
   choices:[{text: "Check the bar", next: "checkbar"}]
 },
 openenvelope:
-text: "You pick up the envelope. "THEY ARE WATCHING. DON'T FORGET." A riddle is scribbled below: 'The more you take, the more you leave behind. What am I?',
+text: "You pick up the envelope. THEY ARE WATCHING. DON'T FORGET. A riddle is scribbled below: 'The more you take, the more you leave behind. What am I?'",
   choices:[{text: "Open the safe", next: "safepuzzle"}]
 },
 safepuzzle:{
@@ -40,7 +40,7 @@ drunkmode:{
     choices:[{text: "Open the envelope", next: "openenvelopeDrunk"}]
 },
 openenvelopeDrunk: {
-  text: "You pick up the envelope. "THEY ARE WATCHING. DON'T FORGET"." A riddle is scribbled below: 'The more you take, the more you leave behind. What am I?',
+  text: "You pick up the envelope. THEY ARE WATCHING. DON'T FORGET. A riddle is scribbled below: 'The more you take, the more you leave behind. What am I?'",
     choices:[{text: "Try the safe", next: "safepuzzleDrunk"}]
 },
 safepuzzleDrunk:{
@@ -55,7 +55,7 @@ leavetavern:{
     ]
   },
 sheriffoffice:{
-  text: "The sheriff's office looks like it was ransacked. The desk has an old journal on top of it that is open to a random page that reads: "It's here. The past, present, and future are intertwined, and the storm brings the truth. The key to the curse is within the boards.",
+  text: "The sheriff's office looks like it was ransacked. The desk has an old journal on top of it that is open to a random page that reads: It's here. The past, present, and future are intertwined, and the storm brings the truth. The key to the curse is within the boards.",
     choices:[
     {text: "Read the journal", next: "readjournal"},
     {text: "Search the room", next: "searchroom"}
@@ -91,11 +91,11 @@ sheriffoffice:{
       choices:[{text: "Answer: Tomorrow", next: "hintatgraveyard"}]
   },
   hintatgraveyard:{
-    text: "The markings on the crypt are where you'll find your end.'"
+    text: "'The markings on the crypt are where you'll find your end.'"
     choices:[{text: "Go to graveyard", next: "graveyard"}]
   },
   well: {
-    text:"Something is drawing you to the well. As if in a trance, you allow yourself to touch the water when a hand comes out and grabs you, dragging you below the surface.
+    text:"Something is drawing you to the well. As if in a trance, you allow yourself to touch the water when a hand comes out and grabs you, dragging you below the surface.",
       choices:[{text: "You Lose.", next: "restart"}]
   },
   funnyending:{
