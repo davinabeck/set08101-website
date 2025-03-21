@@ -21,9 +21,7 @@ checkbar:{
 },
 lockeddoor:{
 text:"Locked. You need to find the key"
-  choices:[
-    {text: "Check the bar", next: "checkbar"
-     ]
+  choices:[{text: "Check the bar", next: "checkbar"}]
 },
 openenvelope:
 text: "You pick up the envelope. "THEY ARE WATCHING. DON'T FORGET." A riddle is scribbled below: 'The more you take, the more you leave behind. What am I?',
@@ -91,7 +89,6 @@ sheriffoffice:{
   churchriddle:{
     text:"'What is always on its way but never arrives?'",
       choices:[{text: "Answer: Tomorrow", next: "hintatgraveyard"}]
-    ]
   },
   hintatgraveyard:{
     text: "The markings on the crypt are where you'll find your end.'"
